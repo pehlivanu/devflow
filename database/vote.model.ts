@@ -1,4 +1,5 @@
 import { model, models, Schema, Types } from "mongoose";
+import { IUser } from "./user.model";
 
 export interface IVote {
   author: Types.ObjectId;
@@ -7,6 +8,7 @@ export interface IVote {
   voteType: "upvote" | "downvote";
 }
 
+export interface IUserDoc extends IUser, Document {}
 const VoteSchema = new Schema<IVote>(
   {
     author: { type: Schema.Types.ObjectId, ref: "User", required: true },
