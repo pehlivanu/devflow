@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 // Copy this template file and rename "Model" everyehere to match the name of the model,
 // and optionally write the models?.NewModel with lowercase in the second-last line of the code
-import { model, models, Schema, Types } from "mongoose";
+import { model, models, Schema, Types, Document } from "mongoose";
 
 export interface IModel {}
 

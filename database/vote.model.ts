@@ -1,4 +1,5 @@
-import { model, models, Schema, Types } from "mongoose";
+import { model, models, Schema, Types, Document } from "mongoose";
+
 import { IUser } from "./user.model";
 
 export interface IVote {
