@@ -9,7 +9,7 @@ export interface IVote {
   voteType: "upvote" | "downvote";
 }
 
-export interface IUserDoc extends IUser, Document {}
+export interface IVoteDoc extends IUser, Document {}
 const VoteSchema = new Schema<IVote>(
   {
     author: { type: Schema.Types.ObjectId, ref: "User", required: true },
