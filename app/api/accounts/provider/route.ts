@@ -7,10 +7,11 @@ import dbConnect from "@/lib/mongoose";
 import { AccountSchema } from "@/lib/validations";
 
 export async function POST(request: Request) {
-  await dbConnect();
   const { providerAccountId } = await request.json();
 
   try {
+    await dbConnect();
+
     const validatedData = AccountSchema.partial().safeParse({
       providerAccountId,
     });
