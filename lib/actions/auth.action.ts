@@ -41,9 +41,21 @@ export async function signUpWithCredentials(
 
     const hashedPassword = await bcrypt.hash(password, 12);
 
-    const [newUser] = await User.create([{ username, name, email }], {
-      session,
-    });
+    const [newUser] = await User.create(
+      [
+        {
+          username,
+          name,
+          email,
+          image:
+            "https://ui-avatars.com/api/?background=random&name=" +
+            encodeURIComponent(name),
+        },
+      ],
+      {
+        session,
+      }
+    );
 
     await Account.create(
       [

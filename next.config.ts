@@ -19,6 +19,12 @@ const nextConfig: NextConfig = {
         hostname: "avatars.githubusercontent.com",
         port: "",
       },
+      // https://ui-avatars.com/api/?background=random&name=
+      {
+        protocol: "https",
+        hostname: "ui-avatars.com",
+        port: "",
+      },
     ],
   },
 };
